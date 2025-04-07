@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #311730, #a19793);
+      }
+
+      .signup-container {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        width: 350px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .signup-container:hover {
+        transform: scale(1.05);
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #311730;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+        position: relative;
+      }
+
+      .input-group label {
+        display: block;
+        font-weight: bold;
+      }
+
+      .input-group input {
+        width: calc(100% - 30px);
+        padding: 8px;
+        padding-left: 30px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .input-group input:focus {
+        box-shadow: 0 0 8px rgba(161, 151, 147, 0.8);
+        outline: none;
+      }
+
+      .input-group i {
+        position: absolute;
+        left: 8px;
+        top: 35px;
+        color: #a19793;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #311730;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #a19793;
+      }
+
+      .login-link {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .login-link a {
+        color: #a19793;
+        text-decoration: none;
+      }
+
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>Create Account</h2>
+      <form>
+        <div class="input-group">
+          <label for="fullname"
+            ><i class="fas fa-user-alt"></i> Full Name</label
+          >
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+        <div class="input-group">
+          <label for="email"><i class="fas fa-envelope-open"></i> Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="username"
+            ><i class="fas fa-user-circle"></i> Username</label
+          >
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password"
+            ><i class="fas fa-check-circle"></i> Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+        <button onclick="w(event)">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </button>
+        <p class="login-link">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </form>
+    </div>
+    <script>
+     
+      function w(event) {
+        event.preventDefault(); 
+       
+        var usr = document.getElementById("username").value;
+        var psw = document.getElementById("password").value;
+        if (usr == "" || psw == "") {
+          window.alert("enter details");
+        } else {
+      
+          localStorage.setItem("sim", usr);
+          localStorage.setItem("ss", psw);
+
+     
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>

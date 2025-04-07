@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color:#E7E1DE;
+            background: #452744;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #C3567A;
+        }
+        h3{
+            color:#E7E1DE
+        }
+
+        #booking-details {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            background: #3A123C;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .property-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #AD4162;
+            color: #fff;
+            margin: 50px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #db3567;
+        }
+
+        .btn i {
+            margin-right: 5px;
+        }
+      .property-details{
+        text-align: left;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Booking Confirmation</h1>
+    </header>
+
+    <section id="booking-details">
+        <h2>Your Selected Property</h2>
+        <div class="property-details">
+            <img id="property-img" src="" alt="Property Image">
+            <h3 id="property-price"></h3>
+            <h4 id="property-title"></h4>
+            <ul id="property-info"></ul>
+        </div>
+
+        <h2>Enter Your Details</h2>
+        <form id="booking-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <button type="submit" class="btn"><i class="fa fa-check-circle"></i> Confirm Booking</button>
+        </form>
+
+        <a href="i.html" class="btn"><i class="fa fa-home"></i> Back to Home</a>
+    </section>
+
+    <script>
+        const propertyData = JSON.parse(localStorage.getItem('selectedProperty'));
+
+        if (propertyData) {
+            document.getElementById('property-img').src = propertyData.imgSrc;
+            document.getElementById('property-price').textContent = propertyData.price;
+            document.getElementById('property-title').textContent = propertyData.title;
+
+            const infoList = document.getElementById('property-info');
+            propertyData.details.forEach(detail => {
+                const listItem = document.createElement('li');
+                listItem.textContent = detail;
+                infoList.style.listStyle='none';
+                infoList.style.padding=0;
+                infoList.appendChild(listItem);
+            });
+        } else {
+            document.getElementById('booking-details').innerHTML = '<h2>No property selected!</h2>';
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            alert(`Thank you, ${name}! Your booking has been confirmed.\nEmail: ${email}\nPhone: ${phone}`);
+        });
+    </script>
+</body>
+</html>

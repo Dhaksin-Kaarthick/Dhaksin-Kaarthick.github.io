@@ -1,0 +1,347 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#E7E1DE;
+    background: #452744;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background: rgb(49, 23, 48);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color:#A19793;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+nav .logo:hover {
+    color:#827671;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:#827671;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 70px;
+    text-align: center;
+    color: #A19793;
+    transition: transform 0.4s ease;
+}
+
+.hero h1:hover {
+    transform: scale(1.05);
+}
+
+.hero p {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.btn {
+    background: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #ff1500;
+    transform: translateY(-3px);
+}
+
+/* Search Property Styling */
+.search-property {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-property form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.search-property input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+   
+}
+
+.search-property input:focus {
+    outline: none;
+  
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.8);
+}
+.inputbtn{
+    color: #FEFAF8;
+    background-color: #563456;
+    border: none;
+}
+/* Property Cards */
+.popular-property {
+    padding: 20px;
+    text-align: center;
+}
+
+.popular-property h2 {
+    font-size: 50px;
+}
+
+.popular-property p {
+    font-size: 30px;
+}
+
+.popular-property .properties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.popular-property .property {
+    border: 1px solid #C3BCB8;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.popular-property .property:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    
+}
+#book1{
+    text-decoration: none;
+}
+#book{
+    display: none;
+}
+.property:hover #book{
+    display: block;
+    
+}
+
+.popular-property .property img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.popular-property .property ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/* Real Estate Journey Section */
+.real-estate-journey {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    color: #E7E1DE;
+    background-color: #452744;
+    
+    margin: 20px auto;
+    width: 80%;
+}
+.real-estate-journey img{
+    border-radius: 10px;
+}
+/* Footer Styling */
+footer {
+    background: #311730;
+    color: #A19793;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    font-size: 1.rem;
+
+}
+footer a{
+    color: #A19793;
+    text-decoration: none; 
+    font-size: 1.4rem;
+}
+footer li {
+    display: flex;
+    
+}
+
+
+footer a:hover {
+    color: hsl(16, 9%, 51%);
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+    width: 100%;
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+/* Hover Effect on Entire Page */
+* {
+    transition: all 0.2s ease-in-out;
+}
+/* Existing CSS remains unchanged... */
+
+/* Media Queries for Tablets */
+@media (max-width: 1024px) {
+    nav .logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .popular-property .property {
+        width: 45%;
+    }
+
+    .real-estate-journey {
+        font-size: 20px;
+    }
+}
+
+/* Media Queries for Phones */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .search-property input {
+        width: 100%;
+    }
+
+    .popular-property .property {
+        width: 100%;
+    }
+
+    .real-estate-journey {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer a {
+        font-size: 1.2rem;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+}

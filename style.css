@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+header {
+    background: #150d1b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.btn {
+    background: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background: #ff1500;
+}
+.search-property {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-property form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-property input {
+    padding: 10px;
+    width: 200px;
+}
+
+.popular-property {
+    padding: 20px;
+    text-align: center;
+}
+.popular-property h2{
+    font-size: 50px;
+}
+.popular-property p{
+    font-size: 30px;
+}
+
+.popular-property .properties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+#navimg{
+border-radius: 5px;
+}
+.popular-property .property {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.popular-property .property img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.popular-property .property h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: blue; 
+}
+
+.popular-property .property h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.popular-property .property ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-property .property ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.real-estate-journey {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+footer {
+    background: #150d1b;
+    color: #fff;
+    padding: 20px;
+   
+    
+}
+
+footer .quick-links {
+    display: inline-block;
+    width: 30%;
+}
+
+footer .quick-links h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+footer .quick-links ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .quick-links ul li {
+    margin: 10px 0;
+}
+
+footer .quick-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .quick-links ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .contact-info {
+    display: inline-block;
+    width: 30%;
+   position: relative;
+   left: 40%;
+}
+
+footer .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+footer .contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+footer .subscribe {
+    text-align: center;
+    width: 30%;
+}
+
+footer .subscribe h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+footer .subscribe p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+footer .subscribe form {
+    display: flex;
+    gap: 10px;
+}
+
+footer .subscribe input {
+    padding: 10px;
+    width: 70%;
+}
+
+footer .subscribe button {
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .subscribe button:hover {
+    background: #f31000;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .popular-property .properties {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular-property .property {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
